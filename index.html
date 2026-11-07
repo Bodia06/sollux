@@ -1,14 +1,156 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="./main.js" defer></script>
+		<script type="module" src="./main.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Red+Hat+Display:wght@500;600&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./styles.css" />
 		<title>SOLLUX</title>
 	</head>
 	<body>
-		<header></header>
+		<header>
+			<h1>
+				<a href="/">SOLLUX</a>
+			</h1>
+			<div class="header__menu" id="site-menu">
+				<nav class="nav" aria-label="Menu główne">
+					<ul class="nav__list">
+						<li class="nav__item nav__item--dropdown">
+							<a class="nav__link" href="#lampy">
+								Lampy
+								<svg
+									class="nav__chevron"
+									width="12"
+									height="12"
+									viewBox="0 0 12 12"
+									fill="none"
+									aria-hidden="true"
+								>
+									<path
+										d="M2 4l4 4 4-4"
+										stroke="currentColor"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
+							<ul class="nav__submenu">
+								<li><a href="#">Podkategoria 1</a></li>
+								<li><a href="#">Podkategoria 2</a></li>
+							</ul>
+						</li>
+						<li class="nav__item nav__item--dropdown">
+							<a class="nav__link" href="#kolory">
+								Kolory
+								<svg
+									class="nav__chevron"
+									width="12"
+									height="12"
+									viewBox="0 0 12 12"
+									fill="none"
+									aria-hidden="true"
+								>
+									<path
+										d="M2 4l4 4 4-4"
+										stroke="currentColor"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
+							<ul class="nav__submenu">
+								<li><a href="#">Podkategoria 1</a></li>
+								<li><a href="#">Podkategoria 2</a></li>
+							</ul>
+						</li>
+						<li class="nav__item nav__item--dropdown">
+							<a class="nav__link" href="#pomieszczenia">
+								Pomieszczenia
+								<svg
+									class="nav__chevron"
+									width="12"
+									height="12"
+									viewBox="0 0 12 12"
+									fill="none"
+									aria-hidden="true"
+								>
+									<path
+										d="M2 4l4 4 4-4"
+										stroke="currentColor"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
+							<ul class="nav__submenu">
+								<li><a href="#">Podkategoria 1</a></li>
+								<li><a href="#">Podkategoria 2</a></li>
+							</ul>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#nowosci">Nowości</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#bestsellery">Bestsellery</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#promocje">Promocje</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__tools">
+					<form class="search" role="search" action="#">
+						<input
+							class="search__input"
+							type="search"
+							name="q"
+							placeholder="Czego szukasz?"
+							aria-label="Czego szukasz?"
+						/>
+						<button class="search__btn" type="submit" aria-label="Szukaj">
+							<img
+								src="./assets/images/Search.png"
+								alt=""
+								width="17"
+								height="17"
+							/>
+						</button>
+					</form>
+					<a class="header__custom" href="#konfigurator">
+						<img src="./assets/images/Box.png" alt="" width="15" height="17" />
+						Stwórz swoją lampę
+					</a>
+					<a class="header__icon header__icon--account" href="#konto">
+						<img src="./assets/images/Person.png" alt="" width="20" height="21" />
+						<span class="header__label">Moje konto</span>
+					</a>
+					<a class="header__icon" href="#koszyk">
+						<img src="./assets/images/Bin.png" alt="" width="23" height="19" />
+						<span class="header__label">Koszyk</span>
+					</a>
+				</div>
+			</div>
+			<button
+				class="header__burger"
+				type="button"
+				aria-label="Otwórz menu"
+				aria-expanded="false"
+				aria-controls="site-menu"
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
 		<main></main>
 		<footer></footer>
 	</body>
