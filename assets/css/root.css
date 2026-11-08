@@ -1,0 +1,73 @@
+:root {
+	--ease: cubic-bezier(0.4, 0, 0.2, 1);
+	--hover-time: 250ms;
+	--fade-time: 600ms;
+	--move-time: 800ms;
+
+	--header-h: clamp(64px, 4.4vw, 86px);
+	--gutter: max(
+		24px,
+		min(8.2vw, calc((100% - 1368px) / 2)),
+		calc((100% - 1600px) / 2)
+	);
+
+	--delay: 3s;
+	--reveal-delay: 250ms;
+	--reveal-step: 100ms;
+	--lamp-delay: 200ms;
+	--lamp-stagger: 140ms;
+	--enter-time: 900ms;
+	--flicker-time: 700ms;
+	--breathe-time: 4s;
+
+	--font-body: 'Red Hat Display', sans-serif;
+	--font-logo: 'Orbitron', sans-serif;
+	--text-nav: clamp(12px, 0.8vw, 15px);
+	--text-hero: clamp(13px, 0.8vw, 16px);
+
+	--arrow-size: clamp(32px, 2.5vw, 48px);
+	--arrow-offset: 3.6vw;
+	--arrow-gap: 40px;
+
+	--color-white: #fff;
+	--color-white-clear: rgba(255, 255, 255, 0);
+	--color-black: #000;
+	--color-accent: #dcc43e;
+	--color-on-accent: #1b1b1b;
+	--color-surface: #1f160f;
+	--color-surface-deep: #1a130e;
+	--color-backdrop-warm: #d9a06f;
+	--color-backdrop-dark: #2a1d14;
+	--color-field: #f4f1ee;
+	--color-text-muted: rgba(255, 255, 255, 0.78);
+	--color-track: rgba(255, 255, 255, 0.45);
+	--color-glass: rgba(120, 98, 72, 0.55);
+	--color-glass-strong: rgba(120, 98, 72, 0.6);
+	--color-line: rgba(0, 0, 0, 0.1);
+	--color-hover: rgba(0, 0, 0, 0.05);
+
+	--scrim-soft: rgba(0, 0, 0, 0.22);
+	--scrim-strong: rgba(0, 0, 0, 0.55);
+	--scrim-bottom: rgba(0, 0, 0, 0.25);
+	--shadow-menu: rgba(0, 0, 0, 0.08);
+	--shadow-lamp: rgba(0, 0, 0, 0.3);
+
+	--glow-core: rgba(255, 220, 140, 0.6);
+	--glow-mid: rgba(255, 200, 110, 0.22);
+	--glow-ambient-core: rgba(255, 214, 140, 0.22);
+	--glow-ambient-mid: rgba(255, 200, 120, 0.08);
+}
+
+@media (max-width: 1440px) {
+	:root {
+		--header-h: 64px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		--hover-time: 0.01ms;
+		--fade-time: 0.01ms;
+		--move-time: 0.01ms;
+	}
+}

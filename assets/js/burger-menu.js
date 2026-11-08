@@ -4,29 +4,43 @@ export function initBurgerMenu () {
   if (!header || !burger) return
 
   const mobileQuery = window.matchMedia('(max-width: 1440px)')
+  const dropdowns = [...header.querySelectorAll('.nav__item--dropdown')]
+
+  function setDropdown (item, open) {
+    item.classList.toggle('is-open', open)
+    item.querySelector('.nav__link').setAttribute('aria-expanded', String(open))
+  }
 
   function setMenu (open) {
     header.classList.toggle('is-open', open)
     document.body.classList.toggle('menu-open', open)
     burger.setAttribute('aria-expanded', String(open))
     burger.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu')
-    if (!open) {
-      header
-        .querySelectorAll('.nav__item--dropdown.is-open')
-        .forEach(item => item.classList.remove('is-open'))
-    }
+    if (!open) dropdowns.forEach(item => setDropdown(item, false))
   }
 
   burger.addEventListener('click', () => {
     setMenu(!header.classList.contains('is-open'))
   })
 
-  header.querySelectorAll('.nav__item--dropdown > .nav__link').forEach(link => {
+  dropdowns.forEach(item => {
+    const link = item.querySelector('.nav__link')
+
     link.addEventListener('click', event => {
       if (!mobileQuery.matches) return
       event.preventDefault()
-      link.parentElement.classList.toggle('is-open')
+      setDropdown(item, !item.classList.contains('is-open'))
     })
+
+    const syncWithPointerAndFocus = () => {
+      if (mobileQuery.matches) return
+      requestAnimationFrame(() => {
+        link.setAttribute('aria-expanded', String(item.matches(':hover, :focus-within')))
+      })
+    }
+    ;['pointerenter', 'pointerleave', 'focusin', 'focusout'].forEach(type =>
+      item.addEventListener(type, syncWithPointerAndFocus)
+    )
   })
 
   header.querySelectorAll('.header__menu a').forEach(link => {

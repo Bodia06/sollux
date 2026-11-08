@@ -11,87 +11,110 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./styles.css" />
-		<title>SOLLUX</title>
+		<title>SOLLUX – lampy w kolorze i formie</title>
+		<meta
+			name="description"
+			content="SOLLUX – lampy, które nadają wnętrzom kolor, formę i nowe światło. Sprawdź bestsellery i nowości."
+		/>
+		<link
+			rel="preload"
+			as="image"
+			href="./assets/images/banner1.jpg"
+			fetchpriority="high"
+		/>
 	</head>
 	<body>
+		<svg
+			width="0"
+			height="0"
+			style="position: absolute"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<symbol id="icon-chevron" viewBox="0 0 12 12" fill="none">
+				<path
+					d="M2 4l4 4 4-4"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</symbol>
+		</svg>
 		<header>
 			<h1>
-				<a href="/">SOLLUX</a>
+				<a class="header__logo" href="/" aria-label="SOLLUX – strona główna"
+					>SOLLUX</a
+				>
 			</h1>
 			<div class="header__menu" id="site-menu">
 				<nav class="nav" aria-label="Menu główne">
 					<ul class="nav__list">
 						<li class="nav__item nav__item--dropdown">
-							<a class="nav__link" href="#lampy">
+							<a
+								class="nav__link"
+								href="#lampy"
+								aria-haspopup="true"
+								aria-expanded="false"
+								aria-controls="submenu-lampy"
+						>
 								Lampy
 								<svg
 									class="nav__chevron"
 									width="12"
 									height="12"
-									viewBox="0 0 12 12"
-									fill="none"
 									aria-hidden="true"
 								>
-									<path
-										d="M2 4l4 4 4-4"
-										stroke="currentColor"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
+									<use href="#icon-chevron" />
 								</svg>
 							</a>
-							<ul class="nav__submenu">
+							<ul class="nav__submenu" id="submenu-lampy">
 								<li><a href="#">Podkategoria 1</a></li>
 								<li><a href="#">Podkategoria 2</a></li>
 							</ul>
 						</li>
 						<li class="nav__item nav__item--dropdown">
-							<a class="nav__link" href="#kolory">
+							<a
+								class="nav__link"
+								href="#kolory"
+								aria-haspopup="true"
+								aria-expanded="false"
+								aria-controls="submenu-kolory"
+						>
 								Kolory
 								<svg
 									class="nav__chevron"
 									width="12"
 									height="12"
-									viewBox="0 0 12 12"
-									fill="none"
 									aria-hidden="true"
 								>
-									<path
-										d="M2 4l4 4 4-4"
-										stroke="currentColor"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
+									<use href="#icon-chevron" />
 								</svg>
 							</a>
-							<ul class="nav__submenu">
+							<ul class="nav__submenu" id="submenu-kolory">
 								<li><a href="#">Podkategoria 1</a></li>
 								<li><a href="#">Podkategoria 2</a></li>
 							</ul>
 						</li>
 						<li class="nav__item nav__item--dropdown">
-							<a class="nav__link" href="#pomieszczenia">
+							<a
+								class="nav__link"
+								href="#pomieszczenia"
+								aria-haspopup="true"
+								aria-expanded="false"
+								aria-controls="submenu-pomieszczenia"
+						>
 								Pomieszczenia
 								<svg
 									class="nav__chevron"
 									width="12"
 									height="12"
-									viewBox="0 0 12 12"
-									fill="none"
 									aria-hidden="true"
 								>
-									<path
-										d="M2 4l4 4 4-4"
-										stroke="currentColor"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
+									<use href="#icon-chevron" />
 								</svg>
 							</a>
-							<ul class="nav__submenu">
+							<ul class="nav__submenu" id="submenu-pomieszczenia">
 								<li><a href="#">Podkategoria 1</a></li>
 								<li><a href="#">Podkategoria 2</a></li>
 							</ul>
@@ -130,7 +153,12 @@
 						Stwórz swoją lampę
 					</a>
 					<a class="header__icon header__icon--account" href="#konto">
-						<img src="./assets/images/Person.png" alt="" width="20" height="21" />
+						<img
+							src="./assets/images/Person.png"
+							alt=""
+							width="20"
+							height="21"
+						/>
 						<span class="header__label">Moje konto</span>
 					</a>
 					<a class="header__icon" href="#koszyk">
@@ -151,7 +179,67 @@
 				<span></span>
 			</button>
 		</header>
-		<main></main>
+		<main>
+			<section
+				class="hero"
+				aria-roledescription="carousel"
+				aria-label="Bestsellery SOLLUX"
+			>
+				<div class="hero__slides" aria-live="off"></div>
+				<button
+					class="hero__arrow hero__arrow--prev"
+					type="button"
+					aria-label="Poprzedni slajd"
+				>
+					<svg
+						width="14"
+						height="14"
+						viewBox="0 0 14 14"
+						fill="none"
+						aria-hidden="true"
+					>
+						<path
+							d="M12 7H2M6 3L2 7l4 4"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</button>
+				<button
+					class="hero__arrow hero__arrow--next"
+					type="button"
+					aria-label="Następny slajd"
+				>
+					<svg
+						width="14"
+						height="14"
+						viewBox="0 0 14 14"
+						fill="none"
+						aria-hidden="true"
+					>
+						<path
+							d="M2 7h10M8 3l4 4-4 4"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</button>
+				<div
+					class="hero__pagination"
+					role="group"
+					aria-label="Wybór slajdu"
+				></div>
+				<p class="hero__rating">
+					<strong>4.8</strong>
+					<img src="./assets/images/Star.png" alt="" width="15" height="17" />
+					<span>Uwielbiany przez klientów</span>
+				</p>
+			</section>
+		</main>
 		<footer></footer>
 	</body>
 </html>

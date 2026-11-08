@@ -152,11 +152,6 @@ select {
 	box-sizing: border-box;
 }
 
-:root {
-	--ease: cubic-bezier(0.4, 0, 0.2, 1);
-	--hover-time: 250ms;
-}
-
 *,
 *::before,
 *::after {
@@ -166,5 +161,14 @@ select {
 body {
 	margin: 0;
 	min-height: 100vh;
-	font-family: 'Red Hat Display', sans-serif;
+	font-family: var(--font-body);
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
 }
