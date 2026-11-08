@@ -75,7 +75,10 @@
 .hero__content {
 	position: absolute;
 	top: 50%;
-	left: max(var(--gutter), calc(var(--arrow-offset) + var(--arrow-size) + var(--arrow-gap)));
+	left: max(
+		var(--gutter),
+		calc(var(--arrow-offset) + var(--arrow-size) + var(--arrow-gap))
+	);
 	z-index: 2;
 	max-width: min(520px, 90%);
 	pointer-events: none;
@@ -278,7 +281,8 @@
 }
 
 .lamp.is-on .lamp__halo {
-	animation: halo-breathe var(--breathe-time) ease-in-out var(--flicker-time) infinite alternate;
+	animation: halo-breathe var(--breathe-time) ease-in-out var(--flicker-time)
+		infinite alternate;
 }
 
 .hero__arrow {
@@ -592,7 +596,6 @@
 	.hero__slide--dark .hero__media::after {
 		background: linear-gradient(0deg, var(--scrim-bottom), transparent 45%);
 	}
-
 
 	.hero__lamp--terracotta {
 		--x: calc(50% - 29 * var(--u));

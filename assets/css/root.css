@@ -25,10 +25,17 @@
 	--text-nav: clamp(12px, 0.8vw, 15px);
 	--text-hero: clamp(13px, 0.8vw, 16px);
 
+	--text-benefit-title: clamp(13px, 1.08vw, 21px);
+	--text-benefit-text: clamp(11px, 0.78vw, 14px);
+	--benefit-icon-row: clamp(24px, 2.2vw, 36px);
+	--icon-scale: clamp(0.5px, 0.0517vw, 0.8px);
+
 	--arrow-size: clamp(32px, 2.5vw, 48px);
 	--arrow-offset: 3.6vw;
 	--arrow-gap: 40px;
 
+	--color-ink: #101011;
+	--color-ink-muted: rgba(16, 16, 17, 0.7);
 	--color-white: #fff;
 	--color-white-clear: rgba(255, 255, 255, 0);
 	--color-black: #000;
