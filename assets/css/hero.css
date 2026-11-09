@@ -277,7 +277,7 @@
 }
 
 .lamp.is-on .lamp__glow {
-	animation: lamp-flicker var(--flicker-time) linear;
+	animation: lamp-flicker var(--flicker-time) var(--ease);
 }
 
 .lamp.is-on .lamp__halo {

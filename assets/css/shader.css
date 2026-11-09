@@ -51,7 +51,19 @@
 	line-height: 1.2;
 	border-radius: var(--radius-pill);
 	background-color: var(--color-accent);
-	transition: background-color var(--button-time) var(--ease);
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+}
+
+.shader__button::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background-color: var(--color-accent-hover);
+	opacity: 0;
+	transition: opacity var(--button-time) var(--ease);
 }
 
 .shader__button:focus-visible {
@@ -68,8 +80,8 @@
 }
 
 @media (hover: hover) {
-	.shader__button:hover {
-		background-color: var(--color-accent-hover);
+	.shader__button:hover::before {
+		opacity: 1;
 	}
 }
 
