@@ -49,7 +49,7 @@
 
 .hero__slide.is-active .hero__bg {
 	transform: none;
-	transition: transform var(--move-time) var(--ease);
+	transition: transform var(--move-time) ease-out;
 }
 
 .hero__media::after {

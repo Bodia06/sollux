@@ -133,6 +133,7 @@
 .search__btn {
 	display: flex;
 	padding: 0;
+	color: inherit;
 	border: 0;
 	background: none;
 	cursor: pointer;
@@ -159,6 +160,22 @@
 	background-color: currentColor;
 	-webkit-mask: var(--icon) center / contain no-repeat;
 	mask: var(--icon) center / contain no-repeat;
+}
+
+.header__img--search {
+	--icon: url('../images/icons/Search.png');
+}
+
+.header__img--box {
+	--icon: url('../images/icons/Box.png');
+}
+
+.header__img--person {
+	--icon: url('../images/icons/Person.png');
+}
+
+.header__img--bin {
+	--icon: url('../images/icons/Bin.png');
 }
 
 .header__label {

@@ -52,7 +52,7 @@
 	position: absolute;
 	inset: 0;
 	backface-visibility: hidden;
-	transition: transform var(--tile-zoom-time) var(--ease);
+	transition: transform var(--tile-zoom-time) ease-out;
 	will-change: transform;
 }
 
