@@ -3,7 +3,57 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script type="module" src="./main.js"></script>
+		<title>SOLLUX – lampy w kolorze i formie | Oficjalny sklep producenta</title>
+		<meta
+			name="description"
+			content="SOLLUX – lampy, które nadają wnętrzom kolor, formę i nowe światło. Sprawdź bestsellery i nowości w oficjalnym sklepie producenta."
+		/>
+		<meta name="robots" content="index, follow, max-image-preview:large" />
+		<meta name="theme-color" content="#101011" />
+		<link rel="canonical" href="https://sollux.pl/" />
+		<link rel="alternate" hreflang="pl" href="https://sollux.pl/" />
+		<link rel="alternate" hreflang="x-default" href="https://sollux.pl/" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/brand/favicon-32.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="./assets/images/brand/icon-192.png" />
+		<link rel="apple-touch-icon" href="./assets/images/brand/apple-touch-icon.png" />
+		<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="SOLLUX" />
+		<meta property="og:locale" content="pl_PL" />
+		<meta property="og:url" content="https://sollux.pl/" />
+		<meta
+			property="og:title"
+			content="SOLLUX – lampy w kolorze i formie"
+		/>
+		<meta
+			property="og:description"
+			content="Lampy, które nadają wnętrzom kolor, formę i nowe światło. Sprawdź bestsellery i nowości."
+		/>
+		<meta
+			property="og:image"
+			content="https://sollux.pl/assets/images/hero/banners/banner1.jpg"
+		/>
+		<meta property="og:image:width" content="2736" />
+		<meta property="og:image:height" content="1536" />
+		<meta
+			property="og:image:alt"
+			content="Kolorowe lampy SOLLUX we wnętrzu"
+		/>
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="SOLLUX – lampy w kolorze i formie"
+		/>
+		<meta
+			name="twitter:description"
+			content="Lampy, które nadają wnętrzom kolor, formę i nowe światło."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://sollux.pl/assets/images/hero/banners/banner1.jpg"
+		/>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -11,17 +61,56 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./styles.css" />
-		<title>SOLLUX – lampy w kolorze i formie</title>
-		<meta
-			name="description"
-			content="SOLLUX – lampy, które nadają wnętrzom kolor, formę i nowe światło. Sprawdź bestsellery i nowości."
-		/>
 		<link
 			rel="preload"
 			as="image"
 			href="./assets/images/hero/banners/banner1.jpg"
 			fetchpriority="high"
 		/>
+		<script type="module" src="./main.js"></script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@graph": [
+					{
+						"@type": "Organization",
+						"@id": "https://sollux.pl/#organization",
+						"name": "Sollux Lighting Sp. z o.o.",
+						"alternateName": "SOLLUX",
+						"url": "https://sollux.pl/",
+						"logo": {
+							"@type": "ImageObject",
+							"url": "https://sollux.pl/assets/images/brand/logo.jpg",
+							"width": 2048,
+							"height": 2048
+						},
+						"email": "sklep@sollux.pl",
+						"telephone": "+48668806323",
+						"taxID": "6070082443",
+						"address": {
+							"@type": "PostalAddress",
+							"streetAddress": "Władysława Łokietka 35",
+							"postalCode": "64-840",
+							"addressLocality": "Budzyń",
+							"addressCountry": "PL"
+						}
+					},
+					{
+						"@type": "WebSite",
+						"@id": "https://sollux.pl/#website",
+						"url": "https://sollux.pl/",
+						"name": "SOLLUX",
+						"inLanguage": "pl-PL",
+						"publisher": { "@id": "https://sollux.pl/#organization" },
+						"potentialAction": {
+							"@type": "SearchAction",
+							"target": "https://sollux.pl/search?q={search_term_string}",
+							"query-input": "required name=search_term_string"
+						}
+					}
+				]
+			}
+		</script>
 	</head>
 	<body>
 		<a class="skip-link" href="#main">Przejdź do treści</a>
