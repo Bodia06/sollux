@@ -14,6 +14,7 @@ export function initBurgerMenu () {
   }
 
   function setMenu (open) {
+    if (open) window.scrollTo(0, 0)
     header.classList.toggle('is-open', open)
     document.body.classList.toggle('is-menu-open', open)
     burger.setAttribute('aria-expanded', String(open))

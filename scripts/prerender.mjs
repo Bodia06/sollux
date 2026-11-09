@@ -2,7 +2,6 @@ import { readFile, writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
-import { getAboutSections } from '../assets/js/about.js'
 import { getBenefitsSections } from '../assets/js/benefits.js'
 import { getFooterSections } from '../assets/js/footer.js'
 import { getHeroSections } from '../assets/js/hero.js'
@@ -17,7 +16,6 @@ const sections = [
   ...getBenefitsSections(),
   ...getTilesSections(),
   ...getShaderSections(),
-  ...getAboutSections(),
   ...getFooterSections()
 ]
 
