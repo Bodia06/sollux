@@ -20,7 +20,7 @@ function renderSocial ({ label, href, src, width, height }) {
 function renderColumn ({ title, links }) {
   return `
     <nav class="footer__col" aria-label="${title}">
-      <h3 class="footer__title">${title}</h3>
+      <h2 class="footer__title">${title}</h2>
       <ul class="footer__links">
         ${links
           .map(({ label, href }) => `<li><a class="footer__link" href="${href}">${label}</a></li>`)

@@ -119,7 +119,7 @@
 	max-width: 16ch;
 	font-size: clamp(32px, 2.72vw, 56px);
 	text-wrap: balance;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 1.08;
 	letter-spacing: -0.01em;
 }
@@ -129,7 +129,7 @@
 	padding: clamp(10px, 0.77vw, 16px) clamp(18px, 1.24vw, 24px);
 	color: var(--color-on-accent);
 	font-size: var(--text-hero);
-	font-weight: bold;
+	font-weight: 700;
 	border-radius: var(--radius-pill);
 	background: var(--color-accent);
 	transition: transform var(--hover-time) var(--ease);
@@ -392,7 +392,7 @@
 
 .hero__score {
 	font-size: clamp(15px, 1.05vw, 21px);
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .hero__star {

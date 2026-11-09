@@ -36,6 +36,7 @@ function renderLamp ({ type, depth }) {
 function renderSlide (slide, index, total) {
   const { theme, background, eyebrow, title, cta, lamps } = slide
   const isFirst = index === 0
+  const heading = isFirst ? 'h1' : 'h2'
 
   return `
     <section class="hero__slide hero__slide--${theme}${isFirst ? ' is-active' : ''}" role="group" aria-roledescription="slide" aria-label="${SLIDE_LABELS.slide(total)(index)}"${isFirst ? '' : ' inert'}>
@@ -45,7 +46,7 @@ function renderSlide (slide, index, total) {
       </div>
       <div class="hero__content">
         <p class="hero__eyebrow">${eyebrow}</p>
-        <h2 class="hero__title">${title}</h2>
+        <${heading} class="hero__title">${title}</${heading}>
         <a class="hero__cta" href="${cta.href}">${cta.label}</a>
       </div>
     </section>`

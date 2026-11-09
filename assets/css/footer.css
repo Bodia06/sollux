@@ -70,7 +70,7 @@
 .footer__title {
 	margin: 0 0 clamp(12px, 1.1vw, 24px);
 	font-size: var(--text-footer-title);
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 1.2;
 }
 

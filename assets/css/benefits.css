@@ -30,7 +30,7 @@
 	margin-bottom: 8px;
 	white-space: nowrap;
 	font-size: var(--text-benefit-title);
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 1.25;
 }
 

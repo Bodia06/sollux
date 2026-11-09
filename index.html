@@ -24,10 +24,11 @@
 		/>
 	</head>
 	<body>
+		<a class="skip-link" href="#main">Przejdź do treści</a>
 		<svg
+			class="sprite"
 			width="0"
 			height="0"
-			style="position: absolute"
 			aria-hidden="true"
 			focusable="false"
 		>
@@ -42,11 +43,9 @@
 			</symbol>
 		</svg>
 		<header class="header">
-			<h1>
-				<a class="header__logo" href="/" aria-label="SOLLUX – strona główna"
-					>SOLLUX</a
-				>
-			</h1>
+			<a class="header__logo" href="/" aria-label="SOLLUX – strona główna"
+				>SOLLUX</a
+			>
 			<div class="header__menu" id="site-menu">
 				<nav class="nav" aria-label="Menu główne">
 					<ul class="nav__list">
@@ -181,7 +180,7 @@
 				<span class="header__burger-line"></span>
 			</button>
 		</header>
-		<main>
+		<main id="main">
 			<section
 				class="hero"
 				aria-roledescription="carousel"
@@ -236,7 +235,7 @@
 					aria-label="Wybór slajdu"
 				></div>
 				<p class="hero__rating">
-					<strong class="hero__score">4.8</strong>
+					<span class="hero__score">4.8</span>
 					<img class="hero__star" src="./assets/images/icons/Star.png" alt="" width="15" height="17" />
 					<span class="hero__rating-text">Uwielbiany przez klientów</span>
 				</p>
@@ -268,15 +267,15 @@
 			</div>
 			<div class="footer__middle">
 				<section class="footer__block" aria-labelledby="footer-payments">
-					<p class="footer__title" id="footer-payments">Płatności i dostawy</p>
+					<h2 class="footer__title" id="footer-payments">Płatności i dostawy</h2>
 					<ul class="footer__payments"></ul>
 				</section>
 				<section class="footer__block" aria-labelledby="footer-awards">
-					<p class="footer__title" id="footer-awards">Nagrody</p>
+					<h2 class="footer__title" id="footer-awards">Nagrody</h2>
 					<ul class="footer__awards"></ul>
 				</section>
 				<section class="footer__block" aria-labelledby="footer-shops">
-					<p class="footer__title" id="footer-shops">Nasze sklepy</p>
+					<h2 class="footer__title" id="footer-shops">Nasze sklepy</h2>
 					<ul class="footer__flags"></ul>
 				</section>
 			</div>
