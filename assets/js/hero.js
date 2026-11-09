@@ -8,9 +8,10 @@ import {
   PROGRESS_ANIMATION,
   REDUCED_MOTION_QUERY,
   SCROLL_SETTLE_DELAY,
+  SLIDE_LABELS,
   SLIDES,
   SWIPE_THRESHOLD
-} from './hero-data.js'
+} from '../data/hero-data.js'
 
 function renderBackground ({ image, width, height, position }, priority) {
   return `<img class="hero__bg" src="${IMAGES_PATH}/${image}" alt="" width="${width}" height="${height}" style="object-position: ${position}" decoding="async" fetchpriority="${priority}" />`
@@ -37,7 +38,7 @@ function renderSlide (slide, index, total) {
   const isFirst = index === 0
 
   return `
-    <section class="hero__slide hero__slide--${theme}${isFirst ? ' is-active' : ''}" role="group" aria-roledescription="slide" aria-label="${index + 1} z ${total}"${isFirst ? '' : ' inert'}>
+    <section class="hero__slide hero__slide--${theme}${isFirst ? ' is-active' : ''}" role="group" aria-roledescription="slide" aria-label="${SLIDE_LABELS.slide(total)(index)}"${isFirst ? '' : ' inert'}>
       <div class="hero__media">
         ${renderBackground(background, isFirst ? 'high' : 'auto')}
         ${lamps.map(renderLamp).join('')}
@@ -53,7 +54,7 @@ function renderSlide (slide, index, total) {
 function renderBullet (_, index) {
   const isFirst = index === 0
 
-  return `<button class="hero__bullet${isFirst ? ' is-active' : ''}" type="button" aria-label="Slajd ${index + 1}" aria-current="${isFirst}"></button>`
+  return `<button class="hero__bullet${isFirst ? ' is-active' : ''}" type="button" aria-label="${SLIDE_LABELS.bullet(index)}" aria-current="${isFirst}"></button>`
 }
 
 function renderHero (hero) {

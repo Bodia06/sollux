@@ -6,7 +6,7 @@ import {
   FOOTER_PAYMENTS,
   FOOTER_SHOPS,
   FOOTER_SOCIALS
-} from './footer-data.js'
+} from '../data/footer-data.js'
 
 function renderSocial ({ label, href, src, width, height }) {
   return `

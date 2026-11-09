@@ -12,6 +12,11 @@ export const LAMP_LABELS = {
   off: 'Włącz lampę'
 }
 
+export const SLIDE_LABELS = {
+  slide: total => index => `${index + 1} z ${total}`,
+  bullet: index => `Slajd ${index + 1}`
+}
+
 export const PARALLAX = {
   maxX: 22,
   maxY: 14,

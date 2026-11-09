@@ -1,4 +1,4 @@
-import { TILES } from './tiles-data.js'
+import { TILES } from '../data/tiles-data.js'
 
 function renderImage ({ src, width, height, cover, position, box }) {
   if (cover) {

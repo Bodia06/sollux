@@ -1,9 +1,11 @@
+import { BURGER } from '../data/burger-menu-data.js'
+
 export function initBurgerMenu () {
   const header = document.querySelector('header')
   const burger = header?.querySelector('.header__burger')
   if (!header || !burger) return
 
-  const mobileQuery = window.matchMedia('(max-width: 1440px)')
+  const mobileQuery = window.matchMedia(BURGER.mobileQuery)
   const dropdowns = [...header.querySelectorAll('.nav__item--dropdown')]
 
   function setDropdown (item, open) {
@@ -15,7 +17,7 @@ export function initBurgerMenu () {
     header.classList.toggle('is-open', open)
     document.body.classList.toggle('menu-open', open)
     burger.setAttribute('aria-expanded', String(open))
-    burger.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu')
+    burger.setAttribute('aria-label', open ? BURGER.labels.close : BURGER.labels.open)
     if (!open) dropdowns.forEach(item => setDropdown(item, false))
   }
 

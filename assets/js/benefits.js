@@ -1,4 +1,4 @@
-import { BENEFITS_ITEMS } from './benefits-data.js'
+import { BENEFITS_ITEMS } from '../data/benefits-data.js'
 
 function renderBenefit ({ srcImg, width, height, title, description }) {
   return `
