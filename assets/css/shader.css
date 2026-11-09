@@ -1,0 +1,108 @@
+.shader {
+	position: relative;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+	min-height: 360px;
+	padding: 48px var(--gutter);
+	aspect-ratio: 961 / 418;
+	background: linear-gradient(
+		180deg,
+		var(--shader-top) 0%,
+		var(--shader-mid) 55%,
+		var(--shader-bottom) 100%
+	);
+	color: var(--color-white);
+	container-type: inline-size;
+}
+
+.shader__canvas {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.shader__content {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.shader__title {
+	max-width: 13em;
+	font-size: var(--text-shader-title);
+	margin-bottom: 15px;
+	font-weight: 600;
+	line-height: 1.1;
+	letter-spacing: -0.03em;
+}
+
+.shader__button {
+	margin-top: 0.75em;
+	padding: 0.7em 1.4em;
+	border-radius: 999px;
+	background-color: var(--color-accent);
+	color: var(--color-on-accent);
+	font-size: var(--text-shader-button);
+	font-weight: 600;
+	line-height: 1.2;
+	transition: background-color var(--button-time) ease-in-out;
+}
+
+.shader__button:focus-visible {
+	outline: 2px solid var(--color-white);
+	outline-offset: 3px;
+}
+
+.shader__note {
+	margin-top: 1.2em;
+	max-width: 13em;
+	font-size: var(--text-shader-note);
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+@media (hover: hover) {
+	.shader__button:hover {
+		background-color: var(--color-accent-hover);
+	}
+}
+
+@media (max-width: 900px) {
+	.shader {
+		aspect-ratio: auto;
+		min-height: clamp(380px, 62vw, 520px);
+		--text-shader-title: clamp(26px, 5.2cqw, 40px);
+		--text-shader-button: clamp(14px, 2.2cqw, 16px);
+		--text-shader-note: clamp(12px, 1.9cqw, 14px);
+	}
+
+	.shader__button {
+		min-height: 44px;
+		display: inline-flex;
+		align-items: center;
+	}
+}
+
+@media (max-width: 600px) {
+	.shader {
+		min-height: clamp(420px, 120vw, 560px);
+		padding-block: 64px;
+		--text-shader-title: clamp(26px, 8vw, 34px);
+		--text-shader-button: 15px;
+		--text-shader-note: 13px;
+	}
+
+	.shader__title {
+		max-width: 11em;
+	}
+
+	.shader__note {
+		max-width: 16em;
+	}
+}

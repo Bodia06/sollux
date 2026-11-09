@@ -45,6 +45,13 @@
 	--tile-bg-cream: #fdf8eb;
 	--tile-bg-gray: #e8e4df;
 
+	--text-shader-title: clamp(22px, 2.7cqw, 48px);
+	--text-shader-button: clamp(11px, 1cqw, 16px);
+	--text-shader-note: clamp(10px, 0.95cqw, 15px);
+	--shader-top: #101011;
+	--shader-mid: #3a3417;
+	--shader-bottom: #8c7825;
+
 	--benefit-icon-row: clamp(24px, 2.2vw, 36px);
 	--icon-scale: clamp(0.5px, 0.0517vw, 0.8px);
 
@@ -60,6 +67,7 @@
 	--color-white-clear: rgba(255, 255, 255, 0);
 	--color-black: #000;
 	--color-accent: #dcc43e;
+	--color-accent-hover: #e8d363;
 	--color-on-accent: #1b1b1b;
 	--color-surface: #1f160f;
 	--color-surface-deep: #1a130e;
