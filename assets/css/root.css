@@ -108,7 +108,7 @@
 	--glow-ambient-mid: rgba(255, 200, 120, 0.08);
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1200px) {
 	:root {
 		--header-h: 64px;
 	}

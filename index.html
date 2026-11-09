@@ -230,31 +230,19 @@
 							aria-label="Czego szukasz?"
 						/>
 						<button class="search__btn" type="submit">
-							<img
-								class="header__img"
-								src="./assets/images/icons/Search.png"
-								alt="Szukaj"
-								width="17"
-								height="17"
-							/>
+							<span class="header__img" role="img" aria-label="Szukaj" style="--icon: url(./assets/images/icons/Search.png); --w: 17; --h: 17"></span>
 						</button>
 					</form>
 					<a class="header__custom" href="#konfigurator">
-						<img class="header__img header__img--custom" src="./assets/images/icons/Box.png" alt="" width="15" height="17" />
+						<span class="header__img header__img--custom" aria-hidden="true" style="--icon: url(./assets/images/icons/Box.png); --w: 15; --h: 17"></span>
 						Stwórz swoją lampę
 					</a>
 					<a class="header__icon header__icon--account" href="#konto">
-						<img
-							class="header__img header__img--icon"
-							src="./assets/images/icons/Person.png"
-							alt="Moje konto"
-							width="20"
-							height="21"
-						/>
+						<span class="header__img header__img--icon" role="img" aria-label="Moje konto" style="--icon: url(./assets/images/icons/Person.png); --w: 20; --h: 21"></span>
 						<span class="header__label" aria-hidden="true">Moje konto</span>
 					</a>
 					<a class="header__icon" href="#koszyk">
-						<img class="header__img header__img--icon" src="./assets/images/icons/Bin.png" alt="Koszyk" width="23" height="19" />
+						<span class="header__img header__img--icon" role="img" aria-label="Koszyk" style="--icon: url(./assets/images/icons/Bin.png); --w: 23; --h: 19"></span>
 						<span class="header__label" aria-hidden="true">Koszyk</span>
 					</a>
 				</div>
@@ -573,7 +561,7 @@
 						W sklepie prezentujemy ceny brutto (z VAT). Stawki VAT dla
 						konsumentów z kraju: Polska.
 					</p>
-					<ul class="footer__details"><li>NIP: 6070082443</li><li>+48 668 806 323</li><li>(Pn - Pt 7:00 - 15:00)</li><li>sklep@sollux.pl</li><li>Sollux Lighting Sp. z o.o.</li><li>Władysława Łokietka 35, 64-840 Budzyń (POLSKA)</li></ul>
+					<ul class="footer__details"><li>NIP: 6070082443</li><li><a class="footer__contact" href="tel:+48668806323">+48 668 806 323</a></li><li>(Pn - Pt 7:00 - 15:00)</li><li><a class="footer__contact" href="mailto:sklep@sollux.pl">sklep@sollux.pl</a></li><li>Sollux Lighting Sp. z o.o.</li><li>Władysława Łokietka 35, 64-840 Budzyń (POLSKA)</li></ul>
 				</div>
 				<ul class="footer__badges"><li><img class="footer__img" src="./assets/images/footer/badges/designCode.png" alt="Design&Code IdoMods" width="98" height="36" loading="lazy" /></li><li><img class="footer__img" src="./assets/images/footer/badges/poweredBy.png" alt="Powered by IdoSell" width="66" height="36" loading="lazy" /></li></ul>
 			</div>

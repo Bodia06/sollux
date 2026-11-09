@@ -51,7 +51,7 @@
 	line-height: 1.2;
 	border-radius: var(--radius-pill);
 	background-color: var(--color-accent);
-	transition: background-color var(--button-time) ease-in-out;
+	transition: background-color var(--button-time) var(--ease);
 }
 
 .shader__button:focus-visible {

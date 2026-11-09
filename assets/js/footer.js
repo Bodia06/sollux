@@ -44,6 +44,11 @@ function renderShop ({ src, label, lang }) {
     </li>`
 }
 
+function renderDetail (detail) {
+  if (typeof detail === 'string') return `<li>${detail}</li>`
+  return `<li><a class="footer__contact" href="${detail.href}">${detail.text}</a></li>`
+}
+
 export function getFooterSections () {
   return [
     ['.footer__socials', FOOTER_SOCIALS.map(renderSocial).join('')],
@@ -51,7 +56,7 @@ export function getFooterSections () {
     ['.footer__payments', FOOTER_PAYMENTS.map(renderImg('footer__payment')).join('')],
     ['.footer__awards', FOOTER_AWARDS.map(renderImg('footer__award')).join('')],
     ['.footer__flags', FOOTER_SHOPS.map(renderShop).join('')],
-    ['.footer__details', FOOTER_DETAILS.map(detail => `<li>${detail}</li>`).join('')],
+    ['.footer__details', FOOTER_DETAILS.map(renderDetail).join('')],
     ['.footer__badges', FOOTER_BADGES.map(renderImg()).join('')]
   ]
 }

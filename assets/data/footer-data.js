@@ -97,9 +97,9 @@ export const FOOTER_SHOPS = [
 
 export const FOOTER_DETAILS = [
   'NIP: 6070082443',
-  '+48 668 806 323',
+  { text: '+48 668 806 323', href: 'tel:+48668806323' },
   '(Pn - Pt 7:00 - 15:00)',
-  'sklep@sollux.pl',
+  { text: 'sklep@sollux.pl', href: 'mailto:sklep@sollux.pl' },
   'Sollux Lighting Sp. z o.o.',
   'Władysława Łokietka 35, 64-840 Budzyń (POLSKA)'
 ]

@@ -284,10 +284,23 @@ function initSlider (hero) {
   initMagneticButtons(hero, reducedMotion)
 }
 
+const LOAD_TIMEOUT = 4000
+
+function revealWhenLoaded (hero) {
+  const images = [...hero.querySelectorAll('.hero__slide.is-active img')]
+  const loaded = Promise.all(images.map(img => img.decode().catch(() => {})))
+  const timeout = new Promise(resolve => setTimeout(resolve, LOAD_TIMEOUT))
+
+  Promise.race([loaded, timeout]).then(() => {
+    requestAnimationFrame(() => hero.classList.add('is-loaded'))
+  })
+}
+
 export function initHero () {
   const hero = document.querySelector('.hero')
   if (!hero) return
 
   hydrate(getHeroSections())
   initSlider(hero)
+  revealWhenLoaded(hero)
 }

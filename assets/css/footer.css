@@ -167,6 +167,15 @@
 	margin: 0;
 }
 
+.footer__contact {
+	color: var(--color-black);
+	transition: opacity var(--hover-time) var(--ease);
+}
+
+.footer__contact:hover {
+	opacity: 0.6;
+}
+
 .footer__badges {
 	display: flex;
 	align-items: center;

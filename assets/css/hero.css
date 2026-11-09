@@ -49,7 +49,7 @@
 
 .hero__slide.is-active .hero__bg {
 	transform: none;
-	transition: transform var(--move-time) ease-out;
+	transition: transform var(--move-time) var(--ease);
 }
 
 .hero__media::after {
@@ -97,7 +97,7 @@
 	transform: none;
 	transition:
 		opacity var(--fade-time) var(--ease) var(--reveal-delay),
-		transform var(--move-time) ease-out var(--reveal-delay);
+		transform var(--move-time) var(--ease) var(--reveal-delay);
 }
 
 .hero__slide.is-active .hero__content > :nth-child(2) {
@@ -184,7 +184,7 @@
 }
 
 .hero__lamp-float {
-	animation: hero-float var(--float) ease-in-out infinite alternate;
+	animation: hero-float var(--float) var(--ease) infinite alternate;
 }
 
 .lamp {
@@ -281,7 +281,7 @@
 }
 
 .lamp.is-on .lamp__halo {
-	animation: halo-breathe var(--breathe-time) ease-in-out var(--flicker-time)
+	animation: halo-breathe var(--breathe-time) var(--ease) var(--flicker-time)
 		infinite alternate;
 }
 
@@ -415,8 +415,12 @@
 	}
 }
 
-.hero__slide.is-active .lamp {
-	animation: lamp-in var(--enter-time) ease-out both;
+.hero:not(.is-loaded) .hero__lamp {
+	opacity: 0;
+}
+
+.hero.is-loaded .hero__slide.is-active .lamp {
+	animation: lamp-in var(--enter-time) var(--ease) both;
 	animation-delay: calc(var(--i) * var(--lamp-stagger) + var(--lamp-delay));
 }
 
@@ -621,7 +625,7 @@
 		pointer-events: auto;
 	}
 
-	.hero__slide.is-active .lamp {
+	.hero.is-loaded .hero__slide.is-active .lamp {
 		animation: none;
 	}
 
@@ -679,7 +683,7 @@
 
 @media (prefers-reduced-motion: reduce) {
 	.hero__lamp-float,
-	.hero__slide.is-active .lamp,
+	.hero.is-loaded .hero__slide.is-active .lamp,
 	.lamp.is-on .lamp__glow,
 	.lamp.is-on .lamp__halo {
 		animation: none;
