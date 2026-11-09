@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sollux.pl/sitemap.xml
+Sitemap: https://sollux-five.vercel.app/sitemap.xml
