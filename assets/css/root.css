@@ -27,6 +27,24 @@
 
 	--text-benefit-title: clamp(13px, 1.08vw, 21px);
 	--text-benefit-text: clamp(11px, 0.78vw, 14px);
+	--tile-height: clamp(240px, 32.3cqw, 560px);
+	--tile-media-ratio: 4 / 3;
+	--tile-gap: clamp(8px, 0.9vw, 14px);
+	--tile-padding: clamp(20px, 2.5vw, 40px);
+	--tile-padding-inner: clamp(14px, 1.6vw, 24px);
+	--radius-tile: clamp(12px, 1.25vw, 20px);
+	--text-tile-eyebrow: clamp(13px, 1.1vw, 21px);
+	--text-tile-title: clamp(20px, 1.9vw, 32px);
+	--text-tile-button: clamp(12px, 0.95vw, 16px);
+	--tile-zoom: 1.1;
+	--tile-zoom-time: 500ms;
+	--button-time: 200ms;
+	--tile-bg-photo: #d9d6dc;
+	--tile-bg-photo-card: #313457;
+	--tile-bg-blue: #72a3f4;
+	--tile-bg-cream: #fdf8eb;
+	--tile-bg-gray: #e8e4df;
+
 	--benefit-icon-row: clamp(24px, 2.2vw, 36px);
 	--icon-scale: clamp(0.5px, 0.0517vw, 0.8px);
 
@@ -34,6 +52,8 @@
 	--arrow-offset: 3.6vw;
 	--arrow-gap: 40px;
 
+	--color-button: #101011;
+	--color-button-hover: #4a4a4a;
 	--color-ink: #101011;
 	--color-ink-muted: rgba(16, 16, 17, 0.7);
 	--color-white: #fff;
@@ -76,5 +96,7 @@
 		--hover-time: 0.01ms;
 		--fade-time: 0.01ms;
 		--move-time: 0.01ms;
+		--tile-zoom-time: 0.01ms;
+		--button-time: 0.01ms;
 	}
 }
