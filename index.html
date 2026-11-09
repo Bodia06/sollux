@@ -19,7 +19,7 @@
 		<link
 			rel="preload"
 			as="image"
-			href="./assets/images/banner1.jpg"
+			href="./assets/images/hero/banners/banner1.jpg"
 			fetchpriority="high"
 		/>
 	</head>
@@ -141,7 +141,7 @@
 						/>
 						<button class="search__btn" type="submit" aria-label="Szukaj">
 							<img
-								src="./assets/images/Search.png"
+								src="./assets/images/icons/Search.png"
 								alt=""
 								width="17"
 								height="17"
@@ -149,12 +149,12 @@
 						</button>
 					</form>
 					<a class="header__custom" href="#konfigurator">
-						<img src="./assets/images/Box.png" alt="" width="15" height="17" />
+						<img src="./assets/images/icons/Box.png" alt="" width="15" height="17" />
 						Stwórz swoją lampę
 					</a>
 					<a class="header__icon header__icon--account" href="#konto">
 						<img
-							src="./assets/images/Person.png"
+							src="./assets/images/icons/Person.png"
 							alt=""
 							width="20"
 							height="21"
@@ -162,7 +162,7 @@
 						<span class="header__label">Moje konto</span>
 					</a>
 					<a class="header__icon" href="#koszyk">
-						<img src="./assets/images/Bin.png" alt="" width="23" height="19" />
+						<img src="./assets/images/icons/Bin.png" alt="" width="23" height="19" />
 						<span class="header__label">Koszyk</span>
 					</a>
 				</div>
@@ -235,7 +235,7 @@
 				></div>
 				<p class="hero__rating">
 					<strong>4.8</strong>
-					<img src="./assets/images/Star.png" alt="" width="15" height="17" />
+					<img src="./assets/images/icons/Star.png" alt="" width="15" height="17" />
 					<span>Uwielbiany przez klientów</span>
 				</p>
 			</section>
@@ -254,6 +254,40 @@
 				</div>
 			</section>
 		</main>
-		<footer></footer>
+		<footer class="footer">
+			<div class="footer__top">
+				<div class="footer__brand">
+					<a class="footer__logo" href="/" aria-label="SOLLUX – strona główna"
+						>SOLLUX</a
+					>
+					<ul class="footer__socials"></ul>
+				</div>
+				<div class="footer__nav"></div>
+			</div>
+			<div class="footer__middle">
+				<section class="footer__block" aria-labelledby="footer-payments">
+					<p class="footer__title" id="footer-payments">Płatności i dostawy</p>
+					<ul class="footer__payments"></ul>
+				</section>
+				<section class="footer__block" aria-labelledby="footer-awards">
+					<p class="footer__title" id="footer-awards">Nagrody</p>
+					<ul class="footer__awards"></ul>
+				</section>
+				<section class="footer__block" aria-labelledby="footer-shops">
+					<p class="footer__title" id="footer-shops">Nasze sklepy</p>
+					<ul class="footer__flags"></ul>
+				</section>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer__legal">
+					<p class="footer__note">
+						W sklepie prezentujemy ceny brutto (z VAT). Stawki VAT dla
+						konsumentów z kraju: Polska.
+					</p>
+					<ul class="footer__details"></ul>
+				</div>
+				<ul class="footer__badges"></ul>
+			</div>
+		</footer>
 	</body>
 </html>

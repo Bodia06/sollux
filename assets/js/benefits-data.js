@@ -1,7 +1,7 @@
 export const BENEFITS_ITEMS = [
   {
     id: 'zwrot',
-    srcImg: './assets/images/Back.png',
+    srcImg: './assets/images/icons/Back.png',
     width: 22,
     height: 15,
     title: 'Zwroty nawet do 100 dni',
@@ -9,7 +9,7 @@ export const BENEFITS_ITEMS = [
   },
   {
     id: 'gwarancja',
-    srcImg: './assets/images/Bookmark.png',
+    srcImg: './assets/images/icons/Bookmark.png',
     width: 19,
     height: 27,
     title: '5 lat gwarancji',
@@ -17,7 +17,7 @@ export const BENEFITS_ITEMS = [
   },
   {
     id: 'dostawa',
-    srcImg: './assets/images/Truck.png',
+    srcImg: './assets/images/icons/Truck.png',
     width: 30,
     height: 26,
     title: 'Darmowa dostawa',
@@ -25,7 +25,7 @@ export const BENEFITS_ITEMS = [
   },
   {
     id: 'polskie-produkty',
-    srcImg: './assets/images/Shield.png',
+    srcImg: './assets/images/icons/Shield.png',
     width: 26,
     height: 30,
     title: 'Polskie produkty',
@@ -33,7 +33,7 @@ export const BENEFITS_ITEMS = [
   },
   {
     id: 'oficjalny-sklep',
-    srcImg: './assets/images/Trophy.png',
+    srcImg: './assets/images/icons/Trophy.png',
     width: 27,
     height: 27,
     title: 'Oficjalny sklep producenta',

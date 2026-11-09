@@ -1,4 +1,4 @@
-export const IMAGES_PATH = './assets/images'
+export const IMAGES_PATH = './assets/images/hero'
 
 export const PHONE_QUERY = '(max-width: 768px)'
 export const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
@@ -25,16 +25,16 @@ export const MAGNETIC = {
 }
 
 export const LAMPS = {
-  cream: { image: 'white_light', width: 372, height: 419, depth: 0.6 },
-  terracotta: { image: 'red-light', width: 423, height: 393, depth: 1.2 },
-  olive: { image: 'green_light', width: 470, height: 428, depth: 0.9 }
+  cream: { image: 'lamps/white_light', width: 372, height: 419, depth: 0.6 },
+  terracotta: { image: 'lamps/red-light', width: 423, height: 393, depth: 1.2 },
+  olive: { image: 'lamps/green_light', width: 470, height: 428, depth: 0.9 }
 }
 
 export const SLIDES = [
   {
     id: 'bestsellers',
     theme: 'warm',
-    background: { image: 'banner1.jpg', width: 2736, height: 1536, position: '62% 100%' },
+    background: { image: 'banners/banner1.jpg', width: 2736, height: 1536, position: '62% 100%' },
     eyebrow: 'Bestsellery SOLLUX',
     title: 'Kolor i forma w nowym świetle',
     cta: { label: 'Sprawdź bestsellery', href: '#bestsellery' },
@@ -43,7 +43,7 @@ export const SLIDES = [
   {
     id: 'new',
     theme: 'dark',
-    background: { image: 'banner2.jpg', width: 1920, height: 1080, position: '55% 50%' },
+    background: { image: 'banners/banner2.jpg', width: 1920, height: 1080, position: '55% 50%' },
     eyebrow: 'Nowości SOLLUX',
     title: 'Światło, które buduje nastrój',
     cta: { label: 'Zobacz nowości', href: '#nowosci' },
