@@ -1,7 +1,7 @@
 .benefits {
 	padding: clamp(32px, 4.8vw, 72px) var(--gutter);
-	background: var(--color-white);
 	color: var(--color-ink);
+	background: var(--color-white);
 }
 
 .benefits__list {
@@ -27,11 +27,11 @@
 
 .benefits__title {
 	margin: 0 0 clamp(4px, 0.5vw, 8px);
+	margin-bottom: 8px;
 	white-space: nowrap;
 	font-size: var(--text-benefit-title);
 	font-weight: bold;
 	line-height: 1.25;
-	margin-bottom: 8px;
 }
 
 .benefits__text {
@@ -81,8 +81,8 @@
 	}
 
 	.benefits__icon {
-		grid-area: 1 / 1 / span 2 / 2;
 		z-index: 1;
+		grid-area: 1 / 1 / span 2 / 2;
 		place-self: center;
 		width: calc(var(--w) * 1px);
 		max-width: 28px;

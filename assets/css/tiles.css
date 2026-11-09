@@ -94,11 +94,11 @@
 
 .tile__button {
 	padding: 16px 24px;
-	border-radius: 999px;
-	background-color: var(--color-button);
 	color: var(--color-white);
 	font-size: var(--text-tile-button);
 	font-weight: 500;
+	border-radius: var(--radius-pill);
+	background-color: var(--color-button);
 	transition: background-color var(--button-time) ease-in-out;
 }
 

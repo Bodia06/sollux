@@ -55,6 +55,19 @@
 	--benefit-icon-row: clamp(24px, 2.2vw, 36px);
 	--icon-scale: clamp(0.5px, 0.0517vw, 0.8px);
 
+	--radius-pill: 999px;
+	--z-header: 100;
+
+	--text-footer: clamp(11px, 0.68vw, 13px);
+	--text-footer-title: clamp(12px, 0.73vw, 14px);
+	--text-footer-logo: clamp(22px, 1.65vw, 44px);
+	--footer-pad-top: clamp(40px, 5vw, 96px);
+	--footer-pad-bottom: clamp(24px, 3vw, 56px);
+	--footer-section-gap: clamp(32px, 3.6vw, 64px);
+	--footer-col-gap: clamp(32px, 4.9vw, 94px);
+	--footer-block-padding: clamp(20px, 1.9vw, 32px);
+	--footer-badge-h: 36px;
+
 	--arrow-size: clamp(32px, 2.5vw, 48px);
 	--arrow-offset: 3.6vw;
 	--arrow-gap: 40px;
@@ -66,6 +79,8 @@
 	--color-white: #fff;
 	--color-white-clear: rgba(255, 255, 255, 0);
 	--color-black: #000;
+	--color-mark: #ff9;
+	--color-rule: #ccc;
 	--color-accent: #dcc43e;
 	--color-accent-hover: #e8d363;
 	--color-on-accent: #1b1b1b;

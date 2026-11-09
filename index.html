@@ -41,7 +41,7 @@
 				/>
 			</symbol>
 		</svg>
-		<header>
+		<header class="header">
 			<h1>
 				<a class="header__logo" href="/" aria-label="SOLLUX – strona główna"
 					>SOLLUX</a
@@ -69,8 +69,8 @@
 								</svg>
 							</a>
 							<ul class="nav__submenu" id="submenu-lampy">
-								<li><a href="#">Podkategoria 1</a></li>
-								<li><a href="#">Podkategoria 2</a></li>
+								<li><a class="nav__sublink" href="#">Podkategoria 1</a></li>
+								<li><a class="nav__sublink" href="#">Podkategoria 2</a></li>
 							</ul>
 						</li>
 						<li class="nav__item nav__item--dropdown">
@@ -92,8 +92,8 @@
 								</svg>
 							</a>
 							<ul class="nav__submenu" id="submenu-kolory">
-								<li><a href="#">Podkategoria 1</a></li>
-								<li><a href="#">Podkategoria 2</a></li>
+								<li><a class="nav__sublink" href="#">Podkategoria 1</a></li>
+								<li><a class="nav__sublink" href="#">Podkategoria 2</a></li>
 							</ul>
 						</li>
 						<li class="nav__item nav__item--dropdown">
@@ -115,8 +115,8 @@
 								</svg>
 							</a>
 							<ul class="nav__submenu" id="submenu-pomieszczenia">
-								<li><a href="#">Podkategoria 1</a></li>
-								<li><a href="#">Podkategoria 2</a></li>
+								<li><a class="nav__sublink" href="#">Podkategoria 1</a></li>
+								<li><a class="nav__sublink" href="#">Podkategoria 2</a></li>
 							</ul>
 						</li>
 						<li class="nav__item">
@@ -141,6 +141,7 @@
 						/>
 						<button class="search__btn" type="submit" aria-label="Szukaj">
 							<img
+								class="header__img"
 								src="./assets/images/icons/Search.png"
 								alt=""
 								width="17"
@@ -149,11 +150,12 @@
 						</button>
 					</form>
 					<a class="header__custom" href="#konfigurator">
-						<img src="./assets/images/icons/Box.png" alt="" width="15" height="17" />
+						<img class="header__img header__img--custom" src="./assets/images/icons/Box.png" alt="" width="15" height="17" />
 						Stwórz swoją lampę
 					</a>
 					<a class="header__icon header__icon--account" href="#konto">
 						<img
+							class="header__img header__img--icon"
 							src="./assets/images/icons/Person.png"
 							alt=""
 							width="20"
@@ -162,7 +164,7 @@
 						<span class="header__label">Moje konto</span>
 					</a>
 					<a class="header__icon" href="#koszyk">
-						<img src="./assets/images/icons/Bin.png" alt="" width="23" height="19" />
+						<img class="header__img header__img--icon" src="./assets/images/icons/Bin.png" alt="" width="23" height="19" />
 						<span class="header__label">Koszyk</span>
 					</a>
 				</div>
@@ -174,9 +176,9 @@
 				aria-expanded="false"
 				aria-controls="site-menu"
 			>
-				<span></span>
-				<span></span>
-				<span></span>
+				<span class="header__burger-line"></span>
+				<span class="header__burger-line"></span>
+				<span class="header__burger-line"></span>
 			</button>
 		</header>
 		<main>
@@ -191,7 +193,7 @@
 					type="button"
 					aria-label="Poprzedni slajd"
 				>
-					<svg
+					<svg class="hero__arrow-icon"
 						width="14"
 						height="14"
 						viewBox="0 0 14 14"
@@ -212,7 +214,7 @@
 					type="button"
 					aria-label="Następny slajd"
 				>
-					<svg
+					<svg class="hero__arrow-icon"
 						width="14"
 						height="14"
 						viewBox="0 0 14 14"
@@ -234,9 +236,9 @@
 					aria-label="Wybór slajdu"
 				></div>
 				<p class="hero__rating">
-					<strong>4.8</strong>
-					<img src="./assets/images/icons/Star.png" alt="" width="15" height="17" />
-					<span>Uwielbiany przez klientów</span>
+					<strong class="hero__score">4.8</strong>
+					<img class="hero__star" src="./assets/images/icons/Star.png" alt="" width="15" height="17" />
+					<span class="hero__rating-text">Uwielbiany przez klientów</span>
 				</p>
 			</section>
 			<section class="benefits" aria-label="Zalety zakupów">

@@ -1,7 +1,7 @@
 import { BURGER } from '../data/burger-menu-data.js'
 
 export function initBurgerMenu () {
-  const header = document.querySelector('header')
+  const header = document.querySelector('.header')
   const burger = header?.querySelector('.header__burger')
   if (!header || !burger) return
 
@@ -15,7 +15,7 @@ export function initBurgerMenu () {
 
   function setMenu (open) {
     header.classList.toggle('is-open', open)
-    document.body.classList.toggle('menu-open', open)
+    document.body.classList.toggle('is-menu-open', open)
     burger.setAttribute('aria-expanded', String(open))
     burger.setAttribute('aria-label', open ? BURGER.labels.close : BURGER.labels.open)
     if (!open) dropdowns.forEach(item => setDropdown(item, false))
