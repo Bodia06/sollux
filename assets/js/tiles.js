@@ -1,15 +1,16 @@
 import { TILES } from '../data/tiles-data.js'
+import { hydrate } from './hydrate.js'
 
-function renderImage ({ src, width, height, cover, position, box }) {
+function renderImage ({ src, alt, width, height, cover, position, box }) {
   if (cover) {
-    return `<img class="tile__img tile__img--cover" src="${src}" alt="" width="${width}" height="${height}" loading="lazy" decoding="async" style="object-position: ${position}" />`
+    return `<img class="tile__img tile__img--cover" src="${src}" alt="${alt}" width="${width}" height="${height}" loading="lazy" decoding="async" style="object-position: ${position}" />`
   }
 
   const placement = Object.entries(box)
     .map(([side, value]) => `${side}: ${value}`)
     .join('; ')
 
-  return `<img class="tile__img" src="${src}" alt="" width="${width}" height="${height}" loading="lazy" decoding="async" style="${placement}" />`
+  return `<img class="tile__img" src="${src}" alt="${alt}" width="${width}" height="${height}" loading="lazy" decoding="async" style="${placement}" />`
 }
 
 function renderTile ({ id, columns, tone, eyebrow, title, cta, images }) {
@@ -24,9 +25,10 @@ function renderTile ({ id, columns, tone, eyebrow, title, cta, images }) {
     </article>`
 }
 
-export function initTiles () {
-  const grid = document.querySelector('.tiles__grid')
-  if (!grid) return
+export function getTilesSections () {
+  return [['.tiles__grid', TILES.map(renderTile).join('')]]
+}
 
-  grid.innerHTML = TILES.map(renderTile).join('')
+export function initTiles () {
+  hydrate(getTilesSections())
 }

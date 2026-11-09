@@ -12,9 +12,10 @@ import {
   SLIDES,
   SWIPE_THRESHOLD
 } from '../data/hero-data.js'
+import { hydrate } from './hydrate.js'
 
-function renderBackground ({ image, width, height, position }, priority) {
-  return `<img class="hero__bg" src="${IMAGES_PATH}/${image}" alt="" width="${width}" height="${height}" style="object-position: ${position}" decoding="async" fetchpriority="${priority}" />`
+function renderBackground ({ image, alt, width, height, position }, priority) {
+  return `<img class="hero__bg" src="${IMAGES_PATH}/${image}" alt="${alt}" width="${width}" height="${height}" style="object-position: ${position}" decoding="async" fetchpriority="${priority}" />`
 }
 
 function renderLamp ({ type, depth }) {
@@ -36,7 +37,6 @@ function renderLamp ({ type, depth }) {
 function renderSlide (slide, index, total) {
   const { theme, background, eyebrow, title, cta, lamps } = slide
   const isFirst = index === 0
-  const heading = isFirst ? 'h1' : 'h2'
 
   return `
     <section class="hero__slide hero__slide--${theme}${isFirst ? ' is-active' : ''}" role="group" aria-roledescription="slide" aria-label="${SLIDE_LABELS.slide(total)(index)}"${isFirst ? '' : ' inert'}>
@@ -46,7 +46,7 @@ function renderSlide (slide, index, total) {
       </div>
       <div class="hero__content">
         <p class="hero__eyebrow">${eyebrow}</p>
-        <${heading} class="hero__title">${title}</${heading}>
+        <h2 class="hero__title">${title}</h2>
         <a class="hero__cta" href="${cta.href}">${cta.label}</a>
       </div>
     </section>`
@@ -58,11 +58,11 @@ function renderBullet (_, index) {
   return `<button class="hero__bullet${isFirst ? ' is-active' : ''}" type="button" aria-label="${SLIDE_LABELS.bullet(index)}" aria-current="${isFirst}"></button>`
 }
 
-function renderHero (hero) {
-  hero.querySelector('.hero__slides').innerHTML = SLIDES.map((slide, index) =>
-    renderSlide(slide, index, SLIDES.length)
-  ).join('')
-  hero.querySelector('.hero__pagination').innerHTML = SLIDES.map(renderBullet).join('')
+export function getHeroSections () {
+  return [
+    ['.hero__slides', SLIDES.map((slide, index) => renderSlide(slide, index, SLIDES.length)).join('')],
+    ['.hero__pagination', SLIDES.map(renderBullet).join('')]
+  ]
 }
 
 function setLamp (lamp, on) {
@@ -288,6 +288,6 @@ export function initHero () {
   const hero = document.querySelector('.hero')
   if (!hero) return
 
-  renderHero(hero)
+  hydrate(getHeroSections())
   initSlider(hero)
 }

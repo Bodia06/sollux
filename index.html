@@ -132,9 +132,11 @@
 			</symbol>
 		</svg>
 		<header class="header">
-			<a class="header__logo" href="/" aria-label="SOLLUX – strona główna"
-				>SOLLUX</a
-			>
+			<h1 class="header__title">
+				<a class="header__logo" href="/" aria-label="SOLLUX – strona główna"
+					>SOLLUX</a
+				>
+			</h1>
 			<div class="header__menu" id="site-menu">
 				<nav class="nav" aria-label="Menu główne">
 					<ul class="nav__list">
@@ -157,8 +159,8 @@
 								</svg>
 							</a>
 							<ul class="nav__submenu" id="submenu-lampy">
-								<li><a class="nav__sublink" href="#">Podkategoria 1</a></li>
-								<li><a class="nav__sublink" href="#">Podkategoria 2</a></li>
+								<li><a class="nav__sublink" href="#">Lampy wiszące</a></li>
+								<li><a class="nav__sublink" href="#">Lampy stołowe</a></li>
 							</ul>
 						</li>
 						<li class="nav__item nav__item--dropdown">
@@ -180,8 +182,8 @@
 								</svg>
 							</a>
 							<ul class="nav__submenu" id="submenu-kolory">
-								<li><a class="nav__sublink" href="#">Podkategoria 1</a></li>
-								<li><a class="nav__sublink" href="#">Podkategoria 2</a></li>
+								<li><a class="nav__sublink" href="#">Lampy w ciepłych kolorach</a></li>
+								<li><a class="nav__sublink" href="#">Lampy w chłodnych kolorach</a></li>
 							</ul>
 						</li>
 						<li class="nav__item nav__item--dropdown">
@@ -203,8 +205,8 @@
 								</svg>
 							</a>
 							<ul class="nav__submenu" id="submenu-pomieszczenia">
-								<li><a class="nav__sublink" href="#">Podkategoria 1</a></li>
-								<li><a class="nav__sublink" href="#">Podkategoria 2</a></li>
+								<li><a class="nav__sublink" href="#">Lampy do salonu</a></li>
+								<li><a class="nav__sublink" href="#">Lampy do sypialni</a></li>
 							</ul>
 						</li>
 						<li class="nav__item">
@@ -227,11 +229,11 @@
 							placeholder="Czego szukasz?"
 							aria-label="Czego szukasz?"
 						/>
-						<button class="search__btn" type="submit" aria-label="Szukaj">
+						<button class="search__btn" type="submit">
 							<img
 								class="header__img"
 								src="./assets/images/icons/Search.png"
-								alt=""
+								alt="Szukaj"
 								width="17"
 								height="17"
 							/>
@@ -245,15 +247,15 @@
 						<img
 							class="header__img header__img--icon"
 							src="./assets/images/icons/Person.png"
-							alt=""
+							alt="Moje konto"
 							width="20"
 							height="21"
 						/>
-						<span class="header__label">Moje konto</span>
+						<span class="header__label" aria-hidden="true">Moje konto</span>
 					</a>
 					<a class="header__icon" href="#koszyk">
-						<img class="header__img header__img--icon" src="./assets/images/icons/Bin.png" alt="" width="23" height="19" />
-						<span class="header__label">Koszyk</span>
+						<img class="header__img header__img--icon" src="./assets/images/icons/Bin.png" alt="Koszyk" width="23" height="19" />
+						<span class="header__label" aria-hidden="true">Koszyk</span>
 					</a>
 				</div>
 			</div>
@@ -275,7 +277,56 @@
 				aria-roledescription="carousel"
 				aria-label="Bestsellery SOLLUX"
 			>
-				<div class="hero__slides" aria-live="off"></div>
+				<div class="hero__slides" aria-live="off">
+    <section class="hero__slide hero__slide--warm is-active" role="group" aria-roledescription="slide" aria-label="1 z 2">
+      <div class="hero__media">
+        <img class="hero__bg" src="./assets/images/hero/banners/banner1.jpg" alt="Kolorowe lampy SOLLUX w ciepłym świetle" width="2736" height="1536" style="object-position: 62% 100%" decoding="async" fetchpriority="high" />
+        
+    <div class="hero__lamp hero__lamp--cream" data-depth="0.6">
+      <div class="hero__lamp-float">
+        <button class="lamp" type="button" aria-pressed="false" aria-label="Włącz lampę">
+          <span class="lamp__halo"></span>
+          <img class="lamp__img" src="./assets/images/hero/lamps/white_light.png" alt="" width="372" height="419" />
+          <img class="lamp__glow" src="./assets/images/hero/lamps/white_light-glow.png" alt="" width="372" height="419" />
+        </button>
+      </div>
+    </div>
+    <div class="hero__lamp hero__lamp--terracotta" data-depth="1.2">
+      <div class="hero__lamp-float">
+        <button class="lamp" type="button" aria-pressed="false" aria-label="Włącz lampę">
+          <span class="lamp__halo"></span>
+          <img class="lamp__img" src="./assets/images/hero/lamps/red-light.png" alt="" width="423" height="393" />
+          <img class="lamp__glow" src="./assets/images/hero/lamps/red-light-glow.png" alt="" width="423" height="393" />
+        </button>
+      </div>
+    </div>
+    <div class="hero__lamp hero__lamp--olive" data-depth="0.9">
+      <div class="hero__lamp-float">
+        <button class="lamp" type="button" aria-pressed="false" aria-label="Włącz lampę">
+          <span class="lamp__halo"></span>
+          <img class="lamp__img" src="./assets/images/hero/lamps/green_light.png" alt="" width="470" height="428" />
+          <img class="lamp__glow" src="./assets/images/hero/lamps/green_light-glow.png" alt="" width="470" height="428" />
+        </button>
+      </div>
+    </div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Bestsellery SOLLUX</p>
+        <h2 class="hero__title">Kolor i forma w nowym świetle</h2>
+        <a class="hero__cta" href="#bestsellery">Sprawdź bestsellery</a>
+      </div>
+    </section>
+    <section class="hero__slide hero__slide--dark" role="group" aria-roledescription="slide" aria-label="2 z 2" inert>
+      <div class="hero__media">
+        <img class="hero__bg" src="./assets/images/hero/banners/banner2.jpg" alt="Nowe lampy SOLLUX w ciemnym wnętrzu" width="1920" height="1080" style="object-position: 55% 50%" decoding="async" fetchpriority="auto" />
+        
+      </div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Nowości SOLLUX</p>
+        <h2 class="hero__title">Światło, które buduje nastrój</h2>
+        <a class="hero__cta" href="#nowosci">Zobacz nowości</a>
+      </div>
+    </section></div>
 				<button
 					class="hero__arrow hero__arrow--prev"
 					type="button"
@@ -322,26 +373,88 @@
 					class="hero__pagination"
 					role="group"
 					aria-label="Wybór slajdu"
-				></div>
+				><button class="hero__bullet is-active" type="button" aria-label="Slajd 1" aria-current="true"></button><button class="hero__bullet" type="button" aria-label="Slajd 2" aria-current="false"></button></div>
 				<p class="hero__rating">
 					<span class="hero__score">4.8</span>
-					<img class="hero__star" src="./assets/images/icons/Star.png" alt="" width="15" height="17" />
+					<img class="hero__star" src="./assets/images/icons/Star.png" alt="z 5 gwiazdek" width="15" height="17" />
 					<span class="hero__rating-text">Uwielbiany przez klientów</span>
 				</p>
 			</section>
-			<section class="benefits" aria-label="Zalety zakupów">
-				<ul class="benefits__list"></ul>
+			<section class="benefits" aria-labelledby="benefits-title">
+				<h2 class="visually-hidden" id="benefits-title">Dlaczego warto kupować w SOLLUX</h2>
+				<ul class="benefits__list">
+    <li class="benefits__item">
+      <img class="benefits__icon" src="./assets/images/icons/Back.png" alt="" width="22" height="15" style="--w: 22" />
+      <h3 class="benefits__title">Zwroty nawet do 100 dni</h3>
+      <p class="benefits__text">szybkie i proste</p>
+    </li>
+    <li class="benefits__item">
+      <img class="benefits__icon" src="./assets/images/icons/Bookmark.png" alt="" width="19" height="27" style="--w: 19" />
+      <h3 class="benefits__title">5 lat gwarancji</h3>
+      <p class="benefits__text">na wszystkie produkty</p>
+    </li>
+    <li class="benefits__item">
+      <img class="benefits__icon" src="./assets/images/icons/Truck.png" alt="" width="30" height="26" style="--w: 30" />
+      <h3 class="benefits__title">Darmowa dostawa</h3>
+      <p class="benefits__text">już za 299 zł</p>
+    </li>
+    <li class="benefits__item">
+      <img class="benefits__icon" src="./assets/images/icons/Shield.png" alt="" width="26" height="30" style="--w: 26" />
+      <h3 class="benefits__title">Polskie produkty</h3>
+      <p class="benefits__text">sprawdzona jakość</p>
+    </li>
+    <li class="benefits__item">
+      <img class="benefits__icon" src="./assets/images/icons/Trophy.png" alt="" width="27" height="27" style="--w: 27" />
+      <h3 class="benefits__title">Oficjalny sklep producenta</h3>
+      <p class="benefits__text">gwarancja satysfakcji</p>
+    </li></ul>
 			</section>
 			<section class="tiles" aria-label="Poznaj ofertę SOLLUX">
-				<div class="tiles__grid"></div>
+				<div class="tiles__grid">
+    <article class="tile tile--thoro tile--light" style="--columns: 2">
+      <div class="tile__media"><img class="tile__img tile__img--cover" src="./assets/images/tiles/People.png" alt="Lampy premium marki THORO we wnętrzu" width="648" height="518" loading="lazy" decoding="async" style="object-position: 50% 30%" /></div>
+      <div class="tile__content">
+        <p class="tile__eyebrow">Marka THORO</p>
+        <h2 class="tile__title">Poznaj lampy premium</h2>
+        <a class="tile__button" href="#thoro">Odwiedź sklep THORO</a>
+      </div>
+    </article>
+    <article class="tile tile--konfigurator tile--light" style="--columns: 3">
+      <div class="tile__media"><img class="tile__img" src="./assets/images/tiles/Phone.png" alt="Konfigurator 3D SOLLUX na ekranie telefonu" width="600" height="505" loading="lazy" decoding="async" style="width: 59.6%; right: 0; bottom: 0" /></div>
+      <div class="tile__content">
+        <p class="tile__eyebrow">Konfigurator 3D</p>
+        <h2 class="tile__title">Wybierz projekt i dostosuj go do swojego wnętrza</h2>
+        <a class="tile__button" href="#konfigurator">Stwórz swój projekt</a>
+      </div>
+    </article>
+    <article class="tile tile--katalog tile--dark" style="--columns: 3">
+      <div class="tile__media"><img class="tile__img" src="./assets/images/tiles/Phone-2.png" alt="Katalog SOLLUX na ekranie telefonu" width="488" height="464" loading="lazy" decoding="async" style="width: 52%; right: 2.4%; bottom: 0" /></div>
+      <div class="tile__content">
+        <p class="tile__eyebrow">Katalog</p>
+        <h2 class="tile__title">Odkryj najnowszy katalog</h2>
+        <a class="tile__button" href="#katalog">Sprawdź katalog</a>
+      </div>
+    </article>
+    <article class="tile tile--aplikacja tile--dark" style="--columns: 2">
+      <div class="tile__media"><img class="tile__img" src="./assets/images/tiles/Phone-4.png" alt="Lampa w aplikacji SOLLUX SMART" width="230" height="231" loading="lazy" decoding="async" style="width: 34.5%; left: 12%; top: 14%" /><img class="tile__img" src="./assets/images/tiles/Phone-3.png" alt="Aplikacja SOLLUX SMART na ekranie telefonu" width="419" height="421" loading="lazy" decoding="async" style="width: 61%; right: 1.6%; bottom: 0" /></div>
+      <div class="tile__content">
+        <p class="tile__eyebrow">SOLLUX SMART</p>
+        <h2 class="tile__title">Przymierz lampę w aplikacji</h2>
+        <a class="tile__button" href="#aplikacja">Pobierz aplikację na telefon</a>
+      </div>
+    </article></div>
 			</section>
 			<section class="shader" aria-labelledby="shader-title">
 				<canvas class="shader__canvas" aria-hidden="true"></canvas>
 				<div class="shader__content">
-					<h2 class="shader__title" id="shader-title"></h2>
-					<a class="shader__button" href="#"></a>
-					<p class="shader__note"></p>
+					<h2 class="shader__title" id="shader-title">Twoje wnętrze zasługuje na wyjątkowe światło</h2>
+					<a class="shader__button" href="#">Kup teraz</a>
+					<p class="shader__note">Od 119 zł na oficjalnej stronie producenta SOLLUX</p>
 				</div>
+			</section>
+			<section class="about" aria-labelledby="about-title">
+				<h2 class="about__title" id="about-title">Lampy w kolorze i formie od polskiego producenta</h2>
+				<div class="about__body"><p class="about__text">SOLLUX to oficjalny sklep producenta lamp, które nadają wnętrzom kolor, formę i nowe światło. Projektujemy oświetlenie dla osób, które chcą urządzić dom z charakterem: od lamp wiszących i stołowych po całe kolekcje dopasowane do salonu, sypialni czy kuchni. W naszej ofercie znajdziesz zarówno bestsellery, jak i najnowsze nowości, a marka premium THORO to propozycja dla najbardziej wymagających.</p><p class="about__text">Aby wybór lampy był prosty, przygotowaliśmy konfigurator 3D, w którym stworzysz własny projekt i dostosujesz go do swojego wnętrza. W aplikacji SOLLUX SMART możesz przymierzyć lampę w telefonie, zanim złożysz zamówienie, a aktualny katalog pomoże znaleźć inspirację. Dzięki temu masz pewność, że kolor i forma lampy idealnie pasują do Twojego domu.</p><p class="about__text">Kupując bezpośrednio od producenta, korzystasz z pewnych warunków zakupu: 5 lat gwarancji na wszystkie produkty, zwrotów nawet do 100 dni oraz darmowej dostawy już od 299 zł. Zamówienie dostarczą InPost, DPD, DHL, GLS lub Poczta Polska, a zapłacisz wygodnie kartą, przez PayU albo PayPal. Nasze produkty są polskie, a sklep działa także w Niemczech, Hiszpanii, Rumunii, Francji, Wielkiej Brytanii, Holandii i Szwecji.</p></div>
 			</section>
 		</main>
 		<footer class="footer">
@@ -350,22 +463,112 @@
 					<a class="footer__logo" href="/" aria-label="SOLLUX – strona główna"
 						>SOLLUX</a
 					>
-					<ul class="footer__socials"></ul>
+					<ul class="footer__socials">
+    <li>
+      <a class="footer__social" href="#" aria-label="Facebook">
+        <img class="footer__img" src="./assets/images/footer/socials/facebook.png" alt="" width="24" height="24" />
+      </a>
+    </li>
+    <li>
+      <a class="footer__social" href="#" aria-label="Instagram">
+        <img class="footer__img" src="./assets/images/footer/socials/instagram.png" alt="" width="24" height="24" />
+      </a>
+    </li>
+    <li>
+      <a class="footer__social" href="#" aria-label="TikTok">
+        <img class="footer__img" src="./assets/images/footer/socials/tikTok.png" alt="" width="14" height="16" />
+      </a>
+    </li>
+    <li>
+      <a class="footer__social" href="#" aria-label="YouTube">
+        <img class="footer__img" src="./assets/images/footer/socials/Youtube.png" alt="" width="23" height="16" />
+      </a>
+    </li></ul>
 				</div>
-				<div class="footer__nav"></div>
+				<div class="footer__nav">
+    <nav class="footer__col" aria-label="Moje zamówienia">
+      <h2 class="footer__title">Moje zamówienia</h2>
+      <ul class="footer__links">
+        <li><a class="footer__link" href="#">Status zamówienia</a></li><li><a class="footer__link" href="#">Śledzenie przesyłki</a></li><li><a class="footer__link" href="#">Chcę zareklamować produkt</a></li><li><a class="footer__link" href="#">Informacje o wymianie</a></li><li><a class="footer__link" href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__col" aria-label="Moje konto">
+      <h2 class="footer__title">Moje konto</h2>
+      <ul class="footer__links">
+        <li><a class="footer__link" href="#">Zarejestruj się</a></li><li><a class="footer__link" href="#">Mój koszyk</a></li><li><a class="footer__link" href="#">Listy zakupowe</a></li><li><a class="footer__link" href="#">Lista zakupionych produktów</a></li><li><a class="footer__link" href="#">Historia transakcji</a></li><li><a class="footer__link" href="#">Moje rabaty</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__col" aria-label="Regulaminy">
+      <h2 class="footer__title">Regulaminy</h2>
+      <ul class="footer__links">
+        <li><a class="footer__link" href="#">Sposoby wysyłki</a></li><li><a class="footer__link" href="#">Sposoby płatności</a></li><li><a class="footer__link" href="#">Regulamin sklepu</a></li><li><a class="footer__link" href="#">Polityka prywatności</a></li><li><a class="footer__link" href="#">Polityka bezpieczeństwa</a></li><li><a class="footer__link" href="#">Zmień ustawienia ciasteczek</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__col" aria-label="Informacje">
+      <h2 class="footer__title">Informacje</h2>
+      <ul class="footer__links">
+        <li><a class="footer__link" href="#">O nas</a></li><li><a class="footer__link" href="#">FAQ</a></li><li><a class="footer__link" href="#">Kurs światła</a></li><li><a class="footer__link" href="#">Inspiracje</a></li><li><a class="footer__link" href="#">Marka premium</a></li><li><a class="footer__link" href="#">Gwarancja</a></li><li><a class="footer__link" href="#">Konfigurator 3D</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__col" aria-label="Współpraca">
+      <h2 class="footer__title">Współpraca</h2>
+      <ul class="footer__links">
+        <li><a class="footer__link" href="#">Dla Architekta</a></li><li><a class="footer__link" href="#">Modele 3D</a></li><li><a class="footer__link" href="#">Dystrybucja</a></li>
+      </ul>
+    </nav></div>
 			</div>
 			<div class="footer__middle">
 				<section class="footer__block" aria-labelledby="footer-payments">
 					<h2 class="footer__title" id="footer-payments">Płatności i dostawy</h2>
-					<ul class="footer__payments"></ul>
+					<ul class="footer__payments"><li class="footer__payment"><img class="footer__img" src="./assets/images/footer/payments/visa.png" alt="Visa" width="43" height="24" loading="lazy" /></li><li class="footer__payment"><img class="footer__img" src="./assets/images/footer/payments/mastercard.png" alt="Mastercard" width="43" height="24" loading="lazy" /></li><li class="footer__payment"><img class="footer__img" src="./assets/images/footer/payments/payU.png" alt="PayU" width="43" height="24" loading="lazy" /></li><li class="footer__payment"><img class="footer__img" src="./assets/images/footer/payments/payPal.png" alt="PayPal" width="43" height="24" loading="lazy" /></li><li class="footer__payment"><img class="footer__img" src="./assets/images/footer/payments/inPost.png" alt="InPost" width="43" height="24" loading="lazy" /></li><li class="footer__payment"><img class="footer__img" src="./assets/images/footer/payments/dpd.png" alt="DPD" width="43" height="24" loading="lazy" /></li><li class="footer__payment"><img class="footer__img" src="./assets/images/footer/payments/paczka.png" alt="Paczka w Ruchu" width="43" height="24" loading="lazy" /></li><li class="footer__payment"><img class="footer__img" src="./assets/images/footer/payments/dhl.png" alt="DHL" width="43" height="24" loading="lazy" /></li><li class="footer__payment"><img class="footer__img" src="./assets/images/footer/payments/gls.png" alt="GLS" width="43" height="24" loading="lazy" /></li><li class="footer__payment"><img class="footer__img" src="./assets/images/footer/payments/pocztaPolska.png" alt="Poczta Polska" width="43" height="24" loading="lazy" /></li></ul>
 				</section>
 				<section class="footer__block" aria-labelledby="footer-awards">
 					<h2 class="footer__title" id="footer-awards">Nagrody</h2>
-					<ul class="footer__awards"></ul>
+					<ul class="footer__awards"><li class="footer__award"><img class="footer__img" src="./assets/images/footer/awards/rzetelna.png" alt="Rzetelna Firma" width="96" height="44" loading="lazy" /></li><li class="footer__award"><img class="footer__img" src="./assets/images/footer/awards/orly.png" alt="Orły Oświetlenia" width="96" height="43" loading="lazy" /></li><li class="footer__award"><img class="footer__img" src="./assets/images/footer/awards/gazele.png" alt="Gazele Biznesu" width="94" height="43" loading="lazy" /></li><li class="footer__award"><img class="footer__img" src="./assets/images/footer/awards/solidna.png" alt="Solidna Firma 2021" width="96" height="43" loading="lazy" /></li><li class="footer__award"><img class="footer__img" src="./assets/images/footer/awards/polskiprodukt.png" alt="Polski Produkt – Gwarancja Jakości" width="96" height="43" loading="lazy" /></li><li class="footer__award"><img class="footer__img" src="./assets/images/footer/awards/firmagodna.png" alt="Firma Godna Zaufania" width="51" height="42" loading="lazy" /></li></ul>
 				</section>
 				<section class="footer__block" aria-labelledby="footer-shops">
 					<h2 class="footer__title" id="footer-shops">Nasze sklepy</h2>
-					<ul class="footer__flags"></ul>
+					<ul class="footer__flags">
+    <li>
+      <a class="footer__flag" href="#" hreflang="pl" title="Polska">
+        <img class="footer__img" src="./assets/images/footer/flags/poland.png" alt="Polska" width="24" height="24" loading="lazy" />
+      </a>
+    </li>
+    <li>
+      <a class="footer__flag" href="#" hreflang="de" title="Deutschland">
+        <img class="footer__img" src="./assets/images/footer/flags/niemcy.png" alt="Deutschland" width="24" height="24" loading="lazy" />
+      </a>
+    </li>
+    <li>
+      <a class="footer__flag" href="#" hreflang="es" title="España">
+        <img class="footer__img" src="./assets/images/footer/flags/hiszpania.png" alt="España" width="24" height="24" loading="lazy" />
+      </a>
+    </li>
+    <li>
+      <a class="footer__flag" href="#" hreflang="ro" title="România">
+        <img class="footer__img" src="./assets/images/footer/flags/rumunia.png" alt="România" width="24" height="24" loading="lazy" />
+      </a>
+    </li>
+    <li>
+      <a class="footer__flag" href="#" hreflang="fr" title="France">
+        <img class="footer__img" src="./assets/images/footer/flags/francja.png" alt="France" width="24" height="24" loading="lazy" />
+      </a>
+    </li>
+    <li>
+      <a class="footer__flag" href="#" hreflang="en" title="United Kingdom">
+        <img class="footer__img" src="./assets/images/footer/flags/anglia.png" alt="United Kingdom" width="24" height="24" loading="lazy" />
+      </a>
+    </li>
+    <li>
+      <a class="footer__flag" href="#" hreflang="nl" title="Nederland">
+        <img class="footer__img" src="./assets/images/footer/flags/holandia.png" alt="Nederland" width="24" height="24" loading="lazy" />
+      </a>
+    </li>
+    <li>
+      <a class="footer__flag" href="#" hreflang="sv" title="Sverige">
+        <img class="footer__img" src="./assets/images/footer/flags/szwecja.png" alt="Sverige" width="24" height="24" loading="lazy" />
+      </a>
+    </li></ul>
 				</section>
 			</div>
 			<div class="footer__bottom">
@@ -374,9 +577,9 @@
 						W sklepie prezentujemy ceny brutto (z VAT). Stawki VAT dla
 						konsumentów z kraju: Polska.
 					</p>
-					<ul class="footer__details"></ul>
+					<ul class="footer__details"><li>NIP: 6070082443</li><li>+48 668 806 323</li><li>(Pn - Pt 7:00 - 15:00)</li><li>sklep@sollux.pl</li><li>Sollux Lighting Sp. z o.o.</li><li>Władysława Łokietka 35, 64-840 Budzyń (POLSKA)</li></ul>
 				</div>
-				<ul class="footer__badges"></ul>
+				<ul class="footer__badges"><li><img class="footer__img" src="./assets/images/footer/badges/designCode.png" alt="Design&Code IdoMods" width="98" height="36" loading="lazy" /></li><li><img class="footer__img" src="./assets/images/footer/badges/poweredBy.png" alt="Powered by IdoSell" width="66" height="36" loading="lazy" /></li></ul>
 			</div>
 		</footer>
 	</body>

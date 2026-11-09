@@ -1,0 +1,8 @@
+{
+  "name": "sollux-landing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prerender": "node scripts/prerender.mjs"
+  }
+}

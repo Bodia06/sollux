@@ -20,7 +20,7 @@ export const FOOTER_COLUMNS = [
     title: 'Moje konto',
     links: [
       { label: 'Zarejestruj się', href: '#' },
-      { label: 'Koszyk', href: '#' },
+      { label: 'Mój koszyk', href: '#' },
       { label: 'Listy zakupowe', href: '#' },
       { label: 'Lista zakupionych produktów', href: '#' },
       { label: 'Historia transakcji', href: '#' },

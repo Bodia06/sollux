@@ -39,7 +39,7 @@ export const SLIDES = [
   {
     id: 'bestsellers',
     theme: 'warm',
-    background: { image: 'banners/banner1.jpg', width: 2736, height: 1536, position: '62% 100%' },
+    background: { image: 'banners/banner1.jpg', alt: 'Kolorowe lampy SOLLUX w ciepłym świetle', width: 2736, height: 1536, position: '62% 100%' },
     eyebrow: 'Bestsellery SOLLUX',
     title: 'Kolor i forma w nowym świetle',
     cta: { label: 'Sprawdź bestsellery', href: '#bestsellery' },
@@ -48,7 +48,7 @@ export const SLIDES = [
   {
     id: 'new',
     theme: 'dark',
-    background: { image: 'banners/banner2.jpg', width: 1920, height: 1080, position: '55% 50%' },
+    background: { image: 'banners/banner2.jpg', alt: 'Nowe lampy SOLLUX w ciemnym wnętrzu', width: 1920, height: 1080, position: '55% 50%' },
     eyebrow: 'Nowości SOLLUX',
     title: 'Światło, które buduje nastrój',
     cta: { label: 'Zobacz nowości', href: '#nowosci' },

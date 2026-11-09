@@ -7,6 +7,7 @@ import {
   FOOTER_SHOPS,
   FOOTER_SOCIALS
 } from '../data/footer-data.js'
+import { hydrate } from './hydrate.js'
 
 function renderSocial ({ label, href, src, width, height }) {
   return `
@@ -43,17 +44,18 @@ function renderShop ({ src, label, lang }) {
     </li>`
 }
 
-function fill (selector, items, render) {
-  const el = document.querySelector(selector)
-  if (el) el.innerHTML = items.map(render).join('')
+export function getFooterSections () {
+  return [
+    ['.footer__socials', FOOTER_SOCIALS.map(renderSocial).join('')],
+    ['.footer__nav', FOOTER_COLUMNS.map(renderColumn).join('')],
+    ['.footer__payments', FOOTER_PAYMENTS.map(renderImg('footer__payment')).join('')],
+    ['.footer__awards', FOOTER_AWARDS.map(renderImg('footer__award')).join('')],
+    ['.footer__flags', FOOTER_SHOPS.map(renderShop).join('')],
+    ['.footer__details', FOOTER_DETAILS.map(detail => `<li>${detail}</li>`).join('')],
+    ['.footer__badges', FOOTER_BADGES.map(renderImg()).join('')]
+  ]
 }
 
 export function initFooter () {
-  fill('.footer__socials', FOOTER_SOCIALS, renderSocial)
-  fill('.footer__nav', FOOTER_COLUMNS, renderColumn)
-  fill('.footer__payments', FOOTER_PAYMENTS, renderImg('footer__payment'))
-  fill('.footer__awards', FOOTER_AWARDS, renderImg('footer__award'))
-  fill('.footer__flags', FOOTER_SHOPS, renderShop)
-  fill('.footer__details', FOOTER_DETAILS, d => `<li>${d}</li>`)
-  fill('.footer__badges', FOOTER_BADGES, renderImg())
+  hydrate(getFooterSections())
 }

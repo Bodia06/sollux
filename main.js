@@ -1,3 +1,4 @@
+import { initAbout } from './assets/js/about.js'
 import { initBenefits } from './assets/js/benefits.js'
 import { initBurgerMenu } from './assets/js/burger-menu.js'
 import { initFooter } from './assets/js/footer.js'
@@ -10,4 +11,5 @@ initHero()
 initBenefits()
 initTiles()
 initShader()
+initAbout()
 initFooter()

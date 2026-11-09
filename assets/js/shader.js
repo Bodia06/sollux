@@ -107,6 +107,14 @@ function startShader (canvas) {
   return true
 }
 
+export function getShaderSections () {
+  return [
+    ['.shader__title', SHADER.title],
+    ['.shader__button', SHADER.cta.label],
+    ['.shader__note', SHADER.note]
+  ]
+}
+
 export function initShader () {
   const section = document.querySelector('.shader')
   if (!section) return
